@@ -23,18 +23,14 @@ def parameter_logger(func):
 
     return wrapper
 
-
-# 함수의 선언과 가까이 있는 것 즉, 가장 밑에 있는 함수부터 실행됩니다.
-# pramerter_logger이 먼저 실행되고 measure_run_time이 실행됩니다.
-# 첫번째 pramerter_logger은 5라는 인자가 정상적으로 출력이 되었습니다.
-# measure_run_time도 정상적으로 출력은 되었지만 함수명이 worker가 아니라 wrapper 입니다.
-
-@measure_run_time
-@parameter_logger
 def worker(delay_time):
     print("%d %s" % (delay_time, "초 후에 실행 됩니다."))
     time.sleep(delay_time)
 
 
 if __name__ == "__main__":
-    worker(5)
+    argument = worker
+    f1 = parameter_logger(argument)
+    f2 = measure_run_time(f1)
+    f2(5)
+
