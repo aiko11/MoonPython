@@ -27,6 +27,7 @@ def parameter_logger(func):
 @measure_run_time
 @parameter_logger
 def worker(delay_time):
+    print("%d %s" % (delay_time, "초 후에 실행 됩니다."))
     time.sleep(delay_time)
 
 

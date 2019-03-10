@@ -17,7 +17,11 @@ def deco(func):
 @deco
 def base():
     print("base function")
+    return 99
 
 if __name__ == "__main__":
     print("=============== Run decorator")
-    base()
+    result = base()
+
+    print("result: %s" % str(result))
+

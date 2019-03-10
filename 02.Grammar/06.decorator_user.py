@@ -9,13 +9,17 @@ def deco(func):
 
 def base():
     print("base function")
+    return 100
 
 
 if __name__ == "__main__":
     print("=============== Run decorator")
 
     # f = deco(base)
-    # f()
-    #위 코드를 한 줄로 작업
+    # result = f()
+    # 아래 코드는 위 코드를 한 줄로 작업
 
-    deco(base)()
+    result = deco(base)()
+
+
+    print("result: %s" % str(result))
