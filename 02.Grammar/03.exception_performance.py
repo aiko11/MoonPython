@@ -7,9 +7,9 @@ TRY_ELSE_TEST_FILE = "sample_file_02"
 
 def write_file_only_try():
     try:
-        f = open(TRY_TEST_FILE)
+        f = open(TRY_TEST_FILE,"w")
 
-        for i in range(10000000):
+        for i in range(1000000):
             f.write(str(i))
 
         f.close()
@@ -21,11 +21,11 @@ def write_file_only_try():
 
 def write_file_try_else():
     try:
-        f = open(TRY_ELSE_TEST_FILE)
+        f = open(TRY_ELSE_TEST_FILE,"w")
     except:
         print("File open error")
     else:
-        for i in range(10000000):
+        for i in range(1000000):
             f.write(str(i))
 
         f.close()
