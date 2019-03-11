@@ -8,7 +8,7 @@ def measure_run_time(func):
         result = func(*args, **kwargs)
         end = time.time()
 
-        print("%s, function running time : %s" % (func.__name__, end - start))
+        print("%s, function running time : %s" % (func.__name__, end-start))
         return result
 
     return wrapper
