@@ -65,7 +65,7 @@ def summary(count):
 
 
 if __name__ == '__main__':
-    cpu,mem,runtime = summary(10)
+    cpu, mem, runtime = summary(10)
     print("[cpu usage] %s" % cpu)
     print("[mem usage] %s" % mem)
     print("[run usage] %s" % runtime)
